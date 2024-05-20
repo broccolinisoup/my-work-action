@@ -13,7 +13,6 @@ const openPR = async ({ owner, repo }: InputFields, username: string, branchName
         base: destinationBranch || 'main',
         head: `refs/heads/${branchName}`,
         title: `@${username}'s Work: ${now}`,
-        draft: false,
         body, 
         headers: {
             authorization: `token ${process.env.GH_TOKEN}`
