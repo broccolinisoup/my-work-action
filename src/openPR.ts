@@ -6,7 +6,7 @@ const openPR = async ({ owner, repo }: InputFields, username: string, branchName
     const now = formatDate(new Date());
     const requestOwner = repo.includes('/') ? repo.split('/')[0] : owner;
     const octokit = github.getOctokit(process.env.GH_TOKEN);
-
+    console.log('is it cached?')
     const prData = {
         owner: requestOwner,
         repo,
